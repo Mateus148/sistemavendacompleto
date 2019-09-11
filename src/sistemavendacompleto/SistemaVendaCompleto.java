@@ -15,7 +15,8 @@ public class SistemaVendaCompleto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        gui.Menu menu = new gui.Menu();        
+        menu.setVisible(true);
     }
     
 }
