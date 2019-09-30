@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package dao;
 
-/**
- *
- * @author Mateus Moura
- */
-public interface IDAO {
+package dao;
+import java.util.ArrayList;
+
+//Interface: define as regras ou padrão de classe.
+
+//<Tipo>: Define o objeto que a classe que está implementando a 
+//interface deve utilizar
+public interface IDAO<Tipo> {
+    
+    //Método: Deve ser implementado na classe que implementa esta interface
+    //throws Exception: Setar este método como inico código
+    public void inserir(Tipo objeto) throws Exception;
+    
+    public void alterar(Tipo objeto) throws Exception;
+    
+    public void excluir(Tipo objeto) throws Exception;
+    
+    public ArrayList<Tipo> listarTodos() throws Exception;
+    
+    public Tipo recuperar(int codigo) throws Exception;
     
 }

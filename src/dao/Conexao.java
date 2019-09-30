@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 import java.sql.*;
 /**
@@ -51,6 +46,25 @@ public class Conexao {
         } catch (SQLException e) {
             
             throw new SQLException("Problemas nos parâmetros de conexão.\n" + e.getMessage());
+        }
+    }
+    
+    //Retorna estado atual da conexão
+    public Connection getConexao(){
+        
+        return conexao;
+        
+    }
+    
+    //Confirmar o envio de informação para o banco
+    public void confirmar() throws SQLException{
+        
+        try {
+            conexao.commit();
+            //Erro de sintex SQL
+        } catch (SQLException e) {
+            
+            throw new SQLException("Problema na instrução SQL.\n" + e.getMessage());
             
             //Encerrar a conexão
         } finally {
@@ -58,7 +72,8 @@ public class Conexao {
             conexao.close();
         }
         
-                
     }
     
 }
+            
+       
