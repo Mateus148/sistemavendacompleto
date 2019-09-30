@@ -124,7 +124,7 @@ public class Menu extends javax.swing.JFrame {
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 198, Short.MAX_VALUE)
+            .addGap(0, 383, Short.MAX_VALUE)
         );
 
         jmCadastros.setText("Cadastros");
@@ -231,7 +231,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(btFornecedor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btSair)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 205, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
